@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jur0978-tokenlens"
+version = "0.1.0"
+description = "估算文本编码后的 token 数，按段落给出占用并指出可替换的高耗词。"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "jur0978" }]
+keywords = ["tokens", "cost", "text", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://jur0978.github.io"
+Repository = "https://github.com/jur0978/tokenlens"
+Issues = "https://github.com/jur0978/tokenlens/issues"
+
+[project.scripts]
+tokenlens = "tokenlens:main"
+
+[tool.setuptools]
+py-modules = ["tokenlens"]
